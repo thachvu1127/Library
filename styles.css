@@ -4,9 +4,19 @@
     box-sizing: border-box;
 }
 
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
 .container {
     height: 20vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -16,14 +26,16 @@
 }
 
 .title-container {
+    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .title {
     z-index: 2;
     font-size: 3rem;
-    color: #4e3b31;
+    color: white;
     font-family: "Bokor", serif;
     font-weight: 400;
 }
@@ -37,3 +49,31 @@
     color: white;
     box-shadow: 2px 2px 2px black ;
 }
+
+
+.review-container {
+    border: 2px solid red;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 10px;
+    gap: 20px;
+}
+
+.article-container {
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.book-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    gap: 5px;
+}
+

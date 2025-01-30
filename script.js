@@ -1,4 +1,5 @@
 const myBookArray = [];
+const reviewContainer = document.querySelector(".review-container");
 
 
 function Book(title, author, pages, read) {
@@ -19,8 +20,18 @@ function displayBook() {
     }
     else {
         myBookArray.forEach((book) => {
-            console.log(book);
+            let bookTitle = document.createElement("p");
+            bookTitle.textContent = book.title;
+            reviewContainer.appendChild(bookTitle);
         })
     }
 }
 
+
+
+// addBookToLibrary("dadada", "dadada", 32, true);
+// addBookToLibrary("dadada", "dadada", 32, true);
+// addBookToLibrary("dadada", "dadada", 32, true);
+// addBookToLibrary("dadada", "dadada", 32, true);
+// addBookToLibrary("dadada", "dadada", 32, true);
+// displayBook();
