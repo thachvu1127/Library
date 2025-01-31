@@ -43,8 +43,7 @@
 
 
 .review-container {
-    border: 2px solid red;
-    width: 90vw;
+    width: 95vw;
     height: 80vh;
     margin: 0 auto;
     display: grid;
@@ -88,21 +87,23 @@
 }
 
 dialog {
-    border: none;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
+    padding: 0.5rem;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background: white;
+    border-radius: 0.25rem;
+    width: 50ch;
   }
 
-  .modal-content {
-    position: relative;
-  }
-
-.modal-container {
+  .modal-form {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
   }
+
+  .modal-form > * {
+    padding: 1rem;
+  }
+
 
   

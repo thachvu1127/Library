@@ -21,40 +21,24 @@
         </div>
     </div>
     <div></div>
-    <div class="review-container">
-        <!-- <article class="article-container">
-            <div class="book-img">
-                <img src="img/small_book.jpg" alt="" class="small-book">
-            </div>
-            <div class="book-content">
-                <h3>To Kill a Mocking Bird</h3>
-                <p>Not Read</p>
-                <p>312 pages</p>
-                <p>author</p>
-            </div>
-            <div class="toggle-btn">
-                <button class="btn">Toogle read status</button>
-                <button class="btn">Delete Book</button>
-            </div> -->
-        </article>
-    </div>
+    <div class="review-container"></div>
 
 
-    <div class="modal-container">
-        <dialog data-modal>
-            <div class="modal-content">
-                <form action="#" method="post">
-                    <label for="book-title">Book Title:</label>
-                    <input type="text" id="book-title">
-                    <label for="book-author">Author:</label>
-                    <input type="text" id="book-author">
-                    <label for="book-pages">Pages:</label>
-                    <input type="text" id="book-pages">
-                    <button data-close-modal>Close</button>
-                </form>
-            </div>
-        </dialog>
-    </div>
+    <dialog data-modal>
+        
+        <div class="modal-content">
+            <form action="#" method="dialog" class="modal-form">
+                <label for="book-title">Book Title:</label>
+                <input type="text" id="book-title">
+                <label for="book-author">Author:</label>
+                <input type="text" id="book-author">
+                <label for="book-pages">Pages:</label>
+                <input type="text" id="book-pages">
+                <button data-close-modal>Close</button>
+            </form>
+        </div>
+        
+    </dialog>
 
     <script src="script.js"></script>
 </body>

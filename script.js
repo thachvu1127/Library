@@ -26,19 +26,19 @@ function displayBook() {
     }
 }
 
-addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-displayBook();
+// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
+// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
+// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
+// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
+// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
+// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
+// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
+// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
+// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
+// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
+// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
+// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
+// displayBook();
 
 function createDiv(divClass) {
     const div = document.createElement("div");
@@ -86,10 +86,14 @@ const openReviewForm = document.querySelector("[data-open-modal]")
 const closeModal = document.querySelector("[data-close-modal]")
 const modal = document.querySelector("[data-modal]");
 
-openReviewForm.addEventListener("click", () => {
+bookReviewBtn.addEventListener("click", () => {
     modal.showModal();
 })
 
 closeModal.addEventListener("click", () => {
-    modal.closeModal();
+    modal.close();
 })
+
+
+
+
