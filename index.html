@@ -16,7 +16,7 @@
                 <div class="title">
                     My Book Review
                 </div>
-                <button class="review-btn">Review a Book</button>
+                <button data-open-modal class="review-btn">Review a Book</button>
             </div>
         </div>
     </div>
@@ -37,6 +37,23 @@
                 <button class="btn">Delete Book</button>
             </div> -->
         </article>
+    </div>
+
+
+    <div class="modal-container">
+        <dialog data-modal>
+            <div class="modal-content">
+                <form action="#" method="post">
+                    <label for="book-title">Book Title:</label>
+                    <input type="text" id="book-title">
+                    <label for="book-author">Author:</label>
+                    <input type="text" id="book-author">
+                    <label for="book-pages">Pages:</label>
+                    <input type="text" id="book-pages">
+                    <button data-close-modal>Close</button>
+                </form>
+            </div>
+        </dialog>
     </div>
 
     <script src="script.js"></script>

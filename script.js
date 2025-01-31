@@ -1,5 +1,6 @@
 const myBookArray = [];
 const reviewContainer = document.querySelector(".review-container");
+const bookReviewBtn = document.querySelector(".review-btn");
 
 
 function Book(title, author, pages) {
@@ -20,7 +21,7 @@ function displayBook() {
     }
     else {
         myBookArray.forEach((book) => {
-            addBookReview(book);
+            addBookReviewCard(book);
         })
     }
 }
@@ -46,6 +47,7 @@ function createDiv(divClass) {
 }
 
 function addReviewImg() {
+    // function adds and image tag to a div and returns the div
     const div = createDiv("book-img");
     const img = document.createElement("img");
     setImgSource(img, "img/small_book.jpg");
@@ -55,6 +57,7 @@ function addReviewImg() {
 }
 
 function setImgSource(imgElement, src) {
+    // function sets the source of an image element
     imgElement.src = src;
 }
 
@@ -70,7 +73,7 @@ function addBookContent(obj) {
     return div
 }
 
-function addBookReview(obj) {
+function addBookReviewCard(obj) {
     const article = document.createElement("article");
     article.classList.add("article-container");
     const bookImg = addReviewImg();
@@ -78,3 +81,15 @@ function addBookReview(obj) {
     article.append(bookImg, bookContent);
     reviewContainer.appendChild(article);
 }
+
+const openReviewForm = document.querySelector("[data-open-modal]")
+const closeModal = document.querySelector("[data-close-modal]")
+const modal = document.querySelector("[data-modal]");
+
+openReviewForm.addEventListener("click", () => {
+    modal.showModal();
+})
+
+closeModal.addEventListener("click", () => {
+    modal.closeModal();
+})

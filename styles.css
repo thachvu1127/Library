@@ -86,3 +86,23 @@
 .btn {
     padding: 2px;
 }
+
+dialog {
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+  .modal-content {
+    position: relative;
+  }
+
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
