@@ -7,12 +7,15 @@ function Book(title, author, pages) {
     this.title = title,
     this.author = author;
     this.pages = pages;
-
 }
 
-function addBookToLibrary(title, author, pages) {
-    const newBook = new Book(title, author, pages);
+function addBookToLibrary() {
+    let title = document.querySelector("#book-title").value;
+    let author = document.querySelector("#book-author").value;
+    let bookPages = document.querySelector("#book-pages").value;
+    let newBook = new Book(title, author, bookPages);
     myBookArray.push(newBook);
+    displayBook();
 }
 
 function displayBook() {
@@ -20,25 +23,10 @@ function displayBook() {
         return "Collections have 0 Books"
     }
     else {
-        myBookArray.forEach((book) => {
-            addBookReviewCard(book);
-        })
+        let currentBook = myBookArray[myBookArray.length - 1];
+        addBookReviewCard(currentBook);
     }
 }
-
-// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-// addBookToLibrary("To Kill a Mocking Bird", "No Author", 234);
-// displayBook();
 
 function createDiv(divClass) {
     const div = document.createElement("div");
@@ -82,7 +70,7 @@ function addBookReviewCard(obj) {
     reviewContainer.appendChild(article);
 }
 
-const openReviewForm = document.querySelector("[data-open-modal]")
+
 const closeModal = document.querySelector("[data-close-modal]")
 const modal = document.querySelector("[data-modal]");
 
@@ -90,10 +78,13 @@ bookReviewBtn.addEventListener("click", () => {
     modal.showModal();
 })
 
-closeModal.addEventListener("click", () => {
+// closeModal.addEventListener("click", () => {
+//     modal.close();
+// })
+
+const bookForm = document.querySelector(".modal-form");
+bookForm.addEventListener("submit", (e) => {
+    e.preventDefault;
+    addBookToLibrary();
     modal.close();
-})
-
-
-
-
+});
