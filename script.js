@@ -1,6 +1,6 @@
 const myBookArray = [];
 const reviewContainer = document.querySelector(".review-container");
-const bookReviewBtn = document.querySelector(".review-btn");
+const newBookBtn = document.querySelector(".review-btn");
 
 
 function Book(title, author, pages) {
@@ -73,18 +73,18 @@ function addBookReviewCard(obj) {
 
 const closeModal = document.querySelector("[data-close-modal]")
 const modal = document.querySelector("[data-modal]");
+const closeBtn = document.querySelector(".close-btn");
+closeBtn.addEventListener("click", () => {
+    modal.close();
+})
 
-bookReviewBtn.addEventListener("click", () => {
+newBookBtn.addEventListener("click", () => {
     modal.showModal();
 })
 
-// closeModal.addEventListener("click", () => {
-//     modal.close();
-// })
 
-const bookForm = document.querySelector(".modal-form");
+const bookForm = document.querySelector("#modal-form");
 bookForm.addEventListener("submit", (e) => {
-    e.preventDefault;
+    e.preventDefault();
     addBookToLibrary();
-    modal.close();
 });
